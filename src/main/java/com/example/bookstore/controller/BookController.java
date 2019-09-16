@@ -46,6 +46,7 @@ public class BookController {
     @RequestMapping(value = "/modify/{id}", method = RequestMethod.GET)
     public String modifyBook(@PathVariable("id") Long bookId, Model model) {
     	Optional<Book> book = repository.findById(bookId);
+        model.addAttribute("categories", crepository.findAll());
     	model.addAttribute("book", book);
         return "modifybook";
     }    

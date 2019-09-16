@@ -24,11 +24,11 @@
 			<input type="text" th:field="*{year}" />	
 			
 			<label for="catlist">Category</label>
-			<select id="catlist" th:field="*{category.id}" class="form-control">
+			<select id="catlist" th:field="*{category.categoryid}" class="form-control">
 				<option
 					th:each="cat: ${categories}"
-					th:value="${cat.id}"
-					th:text="${cat.name"
+					th:value="${cat.categoryid}"
+					th:text="${cat.name}"
 					></option>
 			</select>
 					
